@@ -1,0 +1,11 @@
+commit 618ad40d8c2d1af351daf5143d0c808abed3692c
+tree 7da1ffdd8926c145ecd3b24417327796788da202
+parent f220e03b86821f9899b4593862579bcfd5a93cea
+author root <root@ip-172-31-83-50.ec2.internal> 2019-01-25 02:15:24 +0000
+committer root <root@ip-172-31-83-50.ec2.internal> 2019-01-25 02:15:24 +0000
+
+    Changed pom for upload action
+
+
+
+:100644 100644 51f09a6f9b9965a37be4b2569c336618ee7ea0af 52084a30c7a018874507790e53773723550ebffd M	pom.xml

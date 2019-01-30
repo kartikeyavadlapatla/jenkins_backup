@@ -1,0 +1,11 @@
+commit f220e03b86821f9899b4593862579bcfd5a93cea
+tree cf7dde4322493debc88e58b1e4c9f6ed66ddb18f
+parent 6c7ce3b195520a66f7bce56c560ffdd336bb657b
+author root <root@ip-172-31-83-50.ec2.internal> 2019-01-25 02:09:17 +0000
+committer root <root@ip-172-31-83-50.ec2.internal> 2019-01-25 02:09:17 +0000
+
+    iJenkinsfile added
+
+
+
+:100644 100644 ab210eac08f1141c0e19902067de0906a2d6067a 4fa247e67bcb2cf494f91f5757e1183634b20003 M	Jenkinsfile
