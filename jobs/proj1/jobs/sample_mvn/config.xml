@@ -40,8 +40,7 @@
   <jdk>jdk_8.202</jdk>
   <triggers>
     <hudson.triggers.SCMTrigger>
-      <spec>H/1 * * * *
-* * * * *</spec>
+      <spec>* * * * *</spec>
       <ignorePostCommitHooks>false</ignorePostCommitHooks>
     </hudson.triggers.SCMTrigger>
   </triggers>
@@ -49,7 +48,7 @@
   <builders>
     <hudson.tasks.Maven>
       <targets>clean package</targets>
-      <mavenName>mvn_3.6.0</mavenName>
+      <mavenName>mvn_3.3.9</mavenName>
       <usePrivateRepository>false</usePrivateRepository>
       <settings class="jenkins.mvn.DefaultSettingsProvider"/>
       <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
