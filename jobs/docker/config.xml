@@ -34,7 +34,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <com.nirima.jenkins.plugins.docker.builder.DockerBuilderPublisher plugin="docker-plugin@1.1.6">
-      <dockerFileDirectory>/home/kxv6921/git-code/dockerfile</dockerFileDirectory>
+      <dockerFileDirectory>/home/kxv6921/git-code/</dockerFileDirectory>
       <fromRegistry plugin="docker-commons@1.13"/>
       <tags>
         <string>kxv6921:${BUILD_NUMBER}</string>
