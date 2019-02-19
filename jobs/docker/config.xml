@@ -39,7 +39,7 @@ docker info
 docker build -t kxv6921/bobj-demo:${BUILD_NUMBER} /home/kxv6921/git-code
 #docker tag kxv6921/bobj-demo:${BUILD_NUMBER} katacoda/jenkins-demo:latest
 docker images
-docker run -v /home/kxv6921/git-code:/git-code --publish-all -name: data${BUILD_NUMBER} kxv6921/bobj-demo:${BUILD_NUMBER}
+docker run -v /home/kxv6921/git-code:/git-code --publish-all kxv6921/bobj-demo:${BUILD_NUMBER}
 docker inspect </command>
     </hudson.tasks.Shell>
   </builders>
