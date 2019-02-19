@@ -36,7 +36,7 @@
     <hudson.tasks.Shell>
       <command>ls
 docker info
-docker build -t kxv6921/bobj-demo:${BUILD_NUMBER} /home/kxv6921/git-code/Dockerfile
+docker build -t kxv6921/bobj-demo:${BUILD_NUMBER} /home/kxv6921/git-code
 #docker tag kxv6921/bobj-demo:${BUILD_NUMBER} katacoda/jenkins-demo:latest
 docker images
 docker create -v /home/kxv6921/git-code:/git-code --publish-all --name data kxv6921/bobj-demo:${BUILD_NUMBER}</command>
