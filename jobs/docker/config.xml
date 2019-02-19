@@ -33,38 +33,14 @@
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
-    <com.nirima.jenkins.plugins.docker.builder.DockerBuilderPublisher plugin="docker-plugin@1.1.6">
-      <dockerFileDirectory>/home/kxv6921/git-code/</dockerFileDirectory>
-      <fromRegistry plugin="docker-commons@1.13"/>
-      <tags>
-        <string>kxv6921:${BUILD_NUMBER}</string>
-      </tags>
-      <pushOnSuccess>false</pushOnSuccess>
-      <pushCredentialsId></pushCredentialsId>
-      <cleanImages>false</cleanImages>
-      <cleanupWithJenkinsJobDelete>false</cleanupWithJenkinsJobDelete>
-      <cloud></cloud>
-    </com.nirima.jenkins.plugins.docker.builder.DockerBuilderPublisher>
-    <org.jenkinsci.plugins.dockerbuildstep.DockerBuilder plugin="docker-build-step@2.2">
-      <dockerCmd class="org.jenkinsci.plugins.dockerbuildstep.cmd.CreateContainerCommand">
-        <image>kxv6921:${BUILD_NUMBER}</image>
-        <command>docker create -v /home/kxv6921/git-code:/git-code --publish-all --name data kxv6921:${BUILD_NUMBER}</command>
-        <hostName></hostName>
-        <containerName></containerName>
-        <envVars></envVars>
-        <links></links>
-        <exposedPorts></exposedPorts>
-        <cpuShares></cpuShares>
-        <memoryLimit></memoryLimit>
-        <dns></dns>
-        <extraHosts></extraHosts>
-        <publishAllPorts>false</publishAllPorts>
-        <portBindings></portBindings>
-        <bindMounts></bindMounts>
-        <privileged>false</privileged>
-        <alwaysRestart>false</alwaysRestart>
-      </dockerCmd>
-    </org.jenkinsci.plugins.dockerbuildstep.DockerBuilder>
+    <hudson.tasks.Shell>
+      <command>ls
+docker info
+docker build -t kxv6921/bobj-demo:${BUILD_NUMBER} /home/kxv6921/git-code/Dockerfile
+#docker tag kxv6921/bobj-demo:${BUILD_NUMBER} katacoda/jenkins-demo:latest
+docker images
+docker create -v /home/kxv6921/git-code:/git-code --publish-all --name data kxv6921/bobj-demo:${BUILD_NUMBER}</command>
+    </hudson.tasks.Shell>
   </builders>
   <publishers/>
   <buildWrappers/>
